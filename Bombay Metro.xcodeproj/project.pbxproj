@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D9330AB42804A1C30016B2BE /* FareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9330AB32804A1C30016B2BE /* FareView.swift */; };
+		D9330B0C280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
+		D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
+		D9330B0E280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
+		D937948127FFF87300DA073F /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937948027FFF87200DA073F /* StationView.swift */; };
+		D987448527FF2A600025DF4D /* MetroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448427FF2A600025DF4D /* MetroListView.swift */; };
+		D987448727FF2ADC0025DF4D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448627FF2ADC0025DF4D /* Data.swift */; };
+		D987448927FF376C0025DF4D /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448827FF376B0025DF4D /* LineView.swift */; };
+		D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448A27FF57CD0025DF4D /* CardRechargeView.swift */; };
+		D987448D27FF59010025DF4D /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448C27FF59010025DF4D /* StationMapView.swift */; };
+		D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */; };
+		D9DE2560280A8441008ED61B /* EmergencyNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */; };
+		D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */; };
+		D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55A27FE2DDF00D6785C /* ContentView.swift */; };
+		D9E2D55D27FE2DE100D6785C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9E2D55C27FE2DE100D6785C /* Assets.xcassets */; };
+		D9E2D56027FE2DE100D6785C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9E2D55F27FE2DE100D6785C /* Preview Assets.xcassets */; };
+		D9E2D56A27FE2DE100D6785C /* Bombay_MetroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D56927FE2DE100D6785C /* Bombay_MetroTests.swift */; };
+		D9E2D57427FE2DE100D6785C /* Bombay_MetroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D57327FE2DE100D6785C /* Bombay_MetroUITests.swift */; };
+		D9E2D57627FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D57527FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D9E2D56627FE2DE100D6785C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9E2D54D27FE2DDF00D6785C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9E2D55427FE2DDF00D6785C;
+			remoteInfo = "Bombay Metro";
+		};
+		D9E2D57027FE2DE100D6785C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D9E2D54D27FE2DDF00D6785C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D9E2D55427FE2DDF00D6785C;
+			remoteInfo = "Bombay Metro";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D9330AF52804C70A0016B2BE /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D9330AB32804A1C30016B2BE /* FareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareView.swift; sourceTree = "<group>"; };
+		D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rounded_Elegance.ttf; sourceTree = "<group>"; };
+		D937948027FFF87200DA073F /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
+		D987448427FF2A600025DF4D /* MetroListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroListView.swift; sourceTree = "<group>"; };
+		D987448627FF2ADC0025DF4D /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		D987448827FF376B0025DF4D /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		D987448A27FF57CD0025DF4D /* CardRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRechargeView.swift; sourceTree = "<group>"; };
+		D987448C27FF59010025DF4D /* StationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapView.swift; sourceTree = "<group>"; };
+		D987448E27FF59BF0025DF4D /* Bombay-Metro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bombay-Metro-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D9DE255C2809D150008ED61B /* Bombay Metro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bombay Metro.entitlements"; sourceTree = "<group>"; };
+		D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyNumbers.swift; sourceTree = "<group>"; };
+		D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bombay Metro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroApp.swift; sourceTree = "<group>"; };
+		D9E2D55A27FE2DDF00D6785C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9E2D55C27FE2DE100D6785C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D9E2D55F27FE2DE100D6785C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D9E2D56527FE2DE100D6785C /* Bombay MetroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bombay MetroTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E2D56927FE2DE100D6785C /* Bombay_MetroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroTests.swift; sourceTree = "<group>"; };
+		D9E2D56F27FE2DE100D6785C /* Bombay MetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bombay MetroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9E2D57327FE2DE100D6785C /* Bombay_MetroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroUITests.swift; sourceTree = "<group>"; };
+		D9E2D57527FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D9E2D55227FE2DDF00D6785C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56227FE2DE100D6785C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56C27FE2DE100D6785C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D9330B0A280576FD0016B2BE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		D9E2D54C27FE2DDF00D6785C = {
+			isa = PBXGroup;
+			children = (
+				D9E2D55727FE2DDF00D6785C /* Bombay Metro */,
+				D9E2D56827FE2DE100D6785C /* Bombay MetroTests */,
+				D9E2D57227FE2DE100D6785C /* Bombay MetroUITests */,
+				D9E2D55627FE2DDF00D6785C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D9E2D55627FE2DDF00D6785C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */,
+				D9E2D56527FE2DE100D6785C /* Bombay MetroTests.xctest */,
+				D9E2D56F27FE2DE100D6785C /* Bombay MetroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D9E2D55727FE2DDF00D6785C /* Bombay Metro */ = {
+			isa = PBXGroup;
+			children = (
+				D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */,
+				D9DE255C2809D150008ED61B /* Bombay Metro.entitlements */,
+				D9330B0A280576FD0016B2BE /* Fonts */,
+				D987448E27FF59BF0025DF4D /* Bombay-Metro-Info.plist */,
+				D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */,
+				D9E2D55A27FE2DDF00D6785C /* ContentView.swift */,
+				D9330AB32804A1C30016B2BE /* FareView.swift */,
+				D987448C27FF59010025DF4D /* StationMapView.swift */,
+				D987448A27FF57CD0025DF4D /* CardRechargeView.swift */,
+				D937948027FFF87200DA073F /* StationView.swift */,
+				D987448427FF2A600025DF4D /* MetroListView.swift */,
+				D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */,
+				D987448827FF376B0025DF4D /* LineView.swift */,
+				D987448627FF2ADC0025DF4D /* Data.swift */,
+				D9E2D55C27FE2DE100D6785C /* Assets.xcassets */,
+				D9E2D55E27FE2DE100D6785C /* Preview Content */,
+			);
+			path = "Bombay Metro";
+			sourceTree = "<group>";
+		};
+		D9E2D55E27FE2DE100D6785C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D9E2D55F27FE2DE100D6785C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D9E2D56827FE2DE100D6785C /* Bombay MetroTests */ = {
+			isa = PBXGroup;
+			children = (
+				D9E2D56927FE2DE100D6785C /* Bombay_MetroTests.swift */,
+			);
+			path = "Bombay MetroTests";
+			sourceTree = "<group>";
+		};
+		D9E2D57227FE2DE100D6785C /* Bombay MetroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D9E2D57327FE2DE100D6785C /* Bombay_MetroUITests.swift */,
+				D9E2D57527FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift */,
+			);
+			path = "Bombay MetroUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D9E2D55427FE2DDF00D6785C /* Bombay Metro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E2D57927FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay Metro" */;
+			buildPhases = (
+				D9E2D55127FE2DDF00D6785C /* Sources */,
+				D9E2D55227FE2DDF00D6785C /* Frameworks */,
+				D9E2D55327FE2DDF00D6785C /* Resources */,
+				D9330AF52804C70A0016B2BE /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Bombay Metro";
+			productName = "Bombay Metro";
+			productReference = D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D9E2D56427FE2DE100D6785C /* Bombay MetroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E2D57C27FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay MetroTests" */;
+			buildPhases = (
+				D9E2D56127FE2DE100D6785C /* Sources */,
+				D9E2D56227FE2DE100D6785C /* Frameworks */,
+				D9E2D56327FE2DE100D6785C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9E2D56727FE2DE100D6785C /* PBXTargetDependency */,
+			);
+			name = "Bombay MetroTests";
+			productName = "Bombay MetroTests";
+			productReference = D9E2D56527FE2DE100D6785C /* Bombay MetroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D9E2D56E27FE2DE100D6785C /* Bombay MetroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9E2D57F27FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay MetroUITests" */;
+			buildPhases = (
+				D9E2D56B27FE2DE100D6785C /* Sources */,
+				D9E2D56C27FE2DE100D6785C /* Frameworks */,
+				D9E2D56D27FE2DE100D6785C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9E2D57127FE2DE100D6785C /* PBXTargetDependency */,
+			);
+			name = "Bombay MetroUITests";
+			productName = "Bombay MetroUITests";
+			productReference = D9E2D56F27FE2DE100D6785C /* Bombay MetroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D9E2D54D27FE2DDF00D6785C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					D9E2D55427FE2DDF00D6785C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					D9E2D56427FE2DE100D6785C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D9E2D55427FE2DDF00D6785C;
+					};
+					D9E2D56E27FE2DE100D6785C = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = D9E2D55427FE2DDF00D6785C;
+					};
+				};
+			};
+			buildConfigurationList = D9E2D55027FE2DDF00D6785C /* Build configuration list for PBXProject "Bombay Metro" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D9E2D54C27FE2DDF00D6785C;
+			productRefGroup = D9E2D55627FE2DDF00D6785C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D9E2D55427FE2DDF00D6785C /* Bombay Metro */,
+				D9E2D56427FE2DE100D6785C /* Bombay MetroTests */,
+				D9E2D56E27FE2DE100D6785C /* Bombay MetroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D9E2D55327FE2DDF00D6785C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9330B0C280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+				D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */,
+				D9E2D56027FE2DE100D6785C /* Preview Assets.xcassets in Resources */,
+				D9E2D55D27FE2DE100D6785C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56327FE2DE100D6785C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56D27FE2DE100D6785C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9330B0E280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D9E2D55127FE2DDF00D6785C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D987448D27FF59010025DF4D /* StationMapView.swift in Sources */,
+				D9330AB42804A1C30016B2BE /* FareView.swift in Sources */,
+				D937948127FFF87300DA073F /* StationView.swift in Sources */,
+				D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */,
+				D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */,
+				D987448527FF2A600025DF4D /* MetroListView.swift in Sources */,
+				D987448927FF376C0025DF4D /* LineView.swift in Sources */,
+				D987448727FF2ADC0025DF4D /* Data.swift in Sources */,
+				D9DE2560280A8441008ED61B /* EmergencyNumbers.swift in Sources */,
+				D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56127FE2DE100D6785C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E2D56A27FE2DE100D6785C /* Bombay_MetroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9E2D56B27FE2DE100D6785C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9E2D57627FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift in Sources */,
+				D9E2D57427FE2DE100D6785C /* Bombay_MetroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9E2D56727FE2DE100D6785C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9E2D55427FE2DDF00D6785C /* Bombay Metro */;
+			targetProxy = D9E2D56627FE2DE100D6785C /* PBXContainerItemProxy */;
+		};
+		D9E2D57127FE2DE100D6785C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D9E2D55427FE2DDF00D6785C /* Bombay Metro */;
+			targetProxy = D9E2D57027FE2DE100D6785C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D9E2D57727FE2DE100D6785C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D9E2D57827FE2DE100D6785C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9E2D57A27FE2DE100D6785C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bombay Metro/Bombay Metro.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bombay Metro/Preview Content\"";
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bombay-Metro-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mumbai Metro";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-Metro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D9E2D57B27FE2DE100D6785C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Bombay Metro/Bombay Metro.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Bombay Metro/Preview Content\"";
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bombay-Metro-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Mumbai Metro";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-Metro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D9E2D57D27FE2DE100D6785C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-MetroTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bombay Metro.app/Bombay Metro";
+			};
+			name = Debug;
+		};
+		D9E2D57E27FE2DE100D6785C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-MetroTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bombay Metro.app/Bombay Metro";
+			};
+			name = Release;
+		};
+		D9E2D58027FE2DE100D6785C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-MetroUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bombay Metro";
+			};
+			name = Debug;
+		};
+		D9E2D58127FE2DE100D6785C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R5SRU82TD9;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Bombay-MetroUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Bombay Metro";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D9E2D55027FE2DDF00D6785C /* Build configuration list for PBXProject "Bombay Metro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E2D57727FE2DE100D6785C /* Debug */,
+				D9E2D57827FE2DE100D6785C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9E2D57927FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay Metro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E2D57A27FE2DE100D6785C /* Debug */,
+				D9E2D57B27FE2DE100D6785C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9E2D57C27FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay MetroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E2D57D27FE2DE100D6785C /* Debug */,
+				D9E2D57E27FE2DE100D6785C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9E2D57F27FE2DE100D6785C /* Build configuration list for PBXNativeTarget "Bombay MetroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9E2D58027FE2DE100D6785C /* Debug */,
+				D9E2D58127FE2DE100D6785C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D9E2D54D27FE2DDF00D6785C /* Project object */;
+}
