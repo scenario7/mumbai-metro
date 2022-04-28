@@ -135,10 +135,10 @@ struct LineView: View {
                                     }
                                         HStack {
                                             VStack(alignment:.leading) {
-                                                Text("Bombay Metro")
+                                                Text("Mumbai Metro")
                                                 .font(.system(size: 12, weight: .regular, design: .default))
                                                 .foregroundColor(Color(hue: 0.0, saturation: 0.0, brightness: 1))
-                                                Text("Version 1.0")
+                                                Text("Version 1.0.0")
                                                     .foregroundColor(.gray)
                                                 .font(.system(size: 10, weight: .regular, design: .default))
                                             }

@@ -76,13 +76,30 @@ struct MetroListView: View {
                     UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                 } label: {
                     ZStack {
-                        Circle()
-                            .stroke()
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .foregroundColor(.red)
-                        Image(systemName: "exclamationmark.shield.fill")
-                            .foregroundColor(.red)
+                        RoundedRectangle(cornerRadius: 10)
+                            .shadow(color: .gray, radius: 3, x: 0, y: 0)
+                            .foregroundColor(.white)
+                            .opacity(1)
+                        HStack {
+                            Text("Emergency Numbers")
+                                .font(.system(size: 10, weight: .regular, design: .default))
+                                .foregroundColor(.black)
+                            ZStack {
+                                Circle()
+                                    .stroke()
+                                    .frame(width: 10, height: 30, alignment: .center)
+                                    .foregroundColor(.red)
+                                Image(systemName: "exclamationmark.shield.fill")
+                                    .resizable()
+                                    .frame(width: 6, height: 7)
+                                    .aspectRatio(contentMode: .fit)
+                                    .foregroundColor(.red)
+                            }
+                            .shadow(color: .red, radius: 3, x: 0, y: 0)
+                        }
+                        .padding(0.5)
                     }
+                    .frame(width: 140, height: 10, alignment: .center)
                 }
 
             })
