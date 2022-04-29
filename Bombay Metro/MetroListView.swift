@@ -29,8 +29,14 @@ struct MetroListView: View {
                             ForEach(linesPublished){ line in
                                 ZStack(alignment:.leading) {
                                     RoundedRectangle(cornerRadius: 15)
-                                        .stroke(lineWidth: 1)
-                                        .foregroundColor(.white)
+                                        .stroke(lineWidth: 0)
+                                        .foregroundColor(.blue)
+                                        .background {
+                                            LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .leading, endPoint: .trailing)
+                                                .mask {
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                }
+                                        }
                                     HStack(spacing:20){
                                         ZStack{
                                             Circle()
@@ -77,25 +83,25 @@ struct MetroListView: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 10)
-                            .shadow(color: .gray, radius: 3, x: 0, y: 0)
-                            .foregroundColor(.white)
+                            .shadow(color: .red, radius: 5, x: 0, y: 0)
+                            .foregroundColor(.red)
                             .opacity(1)
                         HStack {
                             Text("Emergency Numbers")
                                 .font(.system(size: 10, weight: .regular, design: .default))
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                             ZStack {
                                 Circle()
                                     .stroke()
                                     .frame(width: 10, height: 30, alignment: .center)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.white)
                                 Image(systemName: "exclamationmark.shield.fill")
                                     .resizable()
                                     .frame(width: 6, height: 7)
                                     .aspectRatio(contentMode: .fit)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(.white)
                             }
-                            .shadow(color: .red, radius: 3, x: 0, y: 0)
+                            .shadow(color: .white, radius: 3, x: 0, y: 0)
                         }
                         .padding(0.5)
                     }
