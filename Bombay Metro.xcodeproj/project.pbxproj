@@ -18,7 +18,6 @@
 		D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448A27FF57CD0025DF4D /* CardRechargeView.swift */; };
 		D987448D27FF59010025DF4D /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448C27FF59010025DF4D /* StationMapView.swift */; };
 		D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */; };
-		D9DE2560280A8441008ED61B /* EmergencyNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */; };
 		D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */; };
 		D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55A27FE2DDF00D6785C /* ContentView.swift */; };
 		D9E2D55D27FE2DE100D6785C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9E2D55C27FE2DE100D6785C /* Assets.xcassets */; };
@@ -70,7 +69,6 @@
 		D987448E27FF59BF0025DF4D /* Bombay-Metro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bombay-Metro-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D9DE255C2809D150008ED61B /* Bombay Metro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bombay Metro.entitlements"; sourceTree = "<group>"; };
 		D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyNumbers.swift; sourceTree = "<group>"; };
 		D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bombay Metro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroApp.swift; sourceTree = "<group>"; };
 		D9E2D55A27FE2DDF00D6785C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				D987448A27FF57CD0025DF4D /* CardRechargeView.swift */,
 				D937948027FFF87200DA073F /* StationView.swift */,
 				D987448427FF2A600025DF4D /* MetroListView.swift */,
-				D9DE255F280A8441008ED61B /* EmergencyNumbers.swift */,
 				D987448827FF376B0025DF4D /* LineView.swift */,
 				D987448627FF2ADC0025DF4D /* Data.swift */,
 				D9E2D55C27FE2DE100D6785C /* Assets.xcassets */,
@@ -327,7 +324,6 @@
 				D987448527FF2A600025DF4D /* MetroListView.swift in Sources */,
 				D987448927FF376C0025DF4D /* LineView.swift in Sources */,
 				D987448727FF2ADC0025DF4D /* Data.swift in Sources */,
-				D9DE2560280A8441008ED61B /* EmergencyNumbers.swift in Sources */,
 				D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

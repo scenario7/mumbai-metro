@@ -90,21 +90,21 @@ struct FareView: View {
                     Button {
                         if (departure==arrival){
                             showingAlert = true
-                            departure = 1
-                            arrival = 1
+//                            departure = 1
+//                            arrival = 1
                             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         } else if ((line==1 || line==2)&&(departure != arrival)){
                             print(departure,arrival)
                             fare = line2A7Fare[departure-1][arrival-1]
-                            departure = 1
-                            arrival = 1
+//                            departure = 1
+//                            arrival = 1
                             showingFare = true
                             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         } else {
                             print(departure-1,arrival-1)
                             fare = line1Fare[departure-1][arrival-1]
-                            departure = 1
-                            arrival = 1
+//                            departure = 1
+//                            arrival = 1
                             showingFare = true
                             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         }
@@ -125,8 +125,11 @@ struct FareView: View {
                     .alert("Departure and Arrival Stations cannot be the same", isPresented: $showingAlert) {
                         Button("Close", role: .cancel) { }
                     }
-                    .alert("Single Journey Fare : ₹\(fare)", isPresented: $showingFare){
-                        Button("OK", role: .cancel){}
+                    .alert("Single Journey Fare : ₹\(fare) \nPlatform No. : \(departure>arrival ? "1" : "2")", isPresented: $showingFare){
+                        Button("OK", role: .cancel){
+                            departure = 1
+                            arrival = 1
+                        }
                     }
                     
                     Spacer()

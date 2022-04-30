@@ -9,7 +9,17 @@ import SwiftUI
 
 struct MetroListView: View {
     
-    @State var showingContacts = false
+    @State var showingContactsBar = false
+    
+    @Environment(\.openURL) private  var openURL
+    var emergencyContacts = [
+    Contact(title: "Women's Safety", number: 18008890808),
+    Contact(title: "Mumbai Police", number: 100),
+    Contact(title: "Fire Emergency", number: 101),
+    Contact(title: "Ambulance", number: 102),
+    Contact(title: "Mumbai Metro One", number: 02233789895),
+    Contact(title: "Line 1 & 7", number: 18008890505)
+    ]
     
     init(){
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().font, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
@@ -24,7 +34,7 @@ struct MetroListView: View {
             ZStack(alignment:.topLeading) {
                 LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
                     .ignoresSafeArea()
-                VStack {
+                VStack(alignment:.leading) {
                     LazyVGrid(columns: columns,alignment: .leading, spacing: 60) {
                             ForEach(linesPublished){ line in
                                 ZStack(alignment:.leading) {
@@ -64,9 +74,6 @@ struct MetroListView: View {
                                         }
                                     }
                                     .padding()
-                                    .sheet(isPresented: $showingContacts) {
-                                                EmergencyNumbers()
-                                            }
                                 }
                                 .frame(width: 250, height: 50, alignment: .center)
 
@@ -74,41 +81,68 @@ struct MetroListView: View {
                         }
                     .padding()
                 .padding(.top, 40)
-                }
-            }
-            .toolbar(content: {
-                Button {
-                    showingContacts.toggle()
-                    UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
-                } label: {
-                    ZStack {
-                        RoundedRectangle(cornerRadius: 10)
-                            .shadow(color: .red, radius: 5, x: 0, y: 0)
-                            .foregroundColor(.red)
-                            .opacity(1)
-                        HStack {
-                            Text("Emergency Numbers")
-                                .font(.system(size: 10, weight: .regular, design: .default))
-                                .foregroundColor(.white)
+                    Spacer()
+                    HStack(alignment:.top) {
+                        Rectangle()
+                            .frame(width: showingContactsBar == true ? 0 : 270)
+                            .opacity(0)
+                        ScrollView(.horizontal, showsIndicators: false){
+                            HStack(alignment:.top,spacing:30){
+                                ForEach(emergencyContacts){ contact in
+                                    VStack {
+                                        Button {
+                                            openURL(URL(string: "tel:\(contact.number)")!)
+                                        } label: {
+                                            ZStack {
+                                                Circle()
+                                                    .frame(height:45)
+                                                    .foregroundColor(.white)
+                                                Image(systemName: "phone.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:20,height: 25)
+                                                    .foregroundColor(.red)
+                                            }
+                                        }
+
+                                        Text(contact.title)
+                                            .font(.system(size: 12, weight: .semibold, design: .default))
+                                            .foregroundColor(.white)
+                                            .multilineTextAlignment(.center)
+                                        Spacer()
+                                    }
+                                    .frame(width:70, height:90)
+                                }
+                            }
+                            .padding(.top,5)
+                        }
+                        .frame(width: showingContactsBar == true ? 270 : 0, height: 57)
+                        
+                        Button {
+                            showingContactsBar.toggle()
+                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                        } label: {
                             ZStack {
                                 Circle()
-                                    .stroke()
-                                    .frame(width: 10, height: 30, alignment: .center)
-                                    .foregroundColor(.white)
-                                Image(systemName: "exclamationmark.shield.fill")
+                                    .frame(height:60)
+                                    .foregroundColor(showingContactsBar ? .red : .green)
+                                    .shadow(color: showingContactsBar ? .red : .green, radius: 4, x: 0, y: 0)
+                                Image(systemName: "phone")
                                     .resizable()
-                                    .frame(width: 6, height: 7)
                                     .aspectRatio(contentMode: .fit)
+                                    .frame(width:25,height: 25)
                                     .foregroundColor(.white)
+                                    .rotationEffect(.degrees(showingContactsBar ? 135 : 0))
                             }
-                            .shadow(color: .white, radius: 3, x: 0, y: 0)
                         }
-                        .padding(0.5)
                     }
-                    .frame(width: 140, height: 10, alignment: .center)
+                    .animation(.easeInOut)
+                    .frame(height:90, alignment: .center)
+                    .edgesIgnoringSafeArea([.trailing, .leading])
+                    .padding()
                 }
-
-            })
+                
+            }
             .navigationBarTitle("Operational Lines")
 
         }
