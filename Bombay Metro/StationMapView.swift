@@ -44,7 +44,6 @@ struct StationMapView: View {
                                 
                                 Text(station.name)
                                     .font(Font.custom(Constants().font, size: 8))
-//                                    .font(.system(size: 8, weight: .semibold, design: .default))
                                     .foregroundColor(.white)
                                     .background(Color.black.opacity(0.7))
                                 
@@ -52,9 +51,10 @@ struct StationMapView: View {
                         }
                         
                     }
+
                     
                 }
-                Picker("What is your favorite color?", selection: $lineDisplayed) {
+                Picker("Line", selection: $lineDisplayed) {
                                 Text("Line 1").tag(0)
                                 Text("Line 2A").tag(1)
                                 Text("Line 7").tag(2)
@@ -66,7 +66,6 @@ struct StationMapView: View {
                 Button("OK", role: .cancel){}
             }
             .navigationBarTitle("Station Map")
-//            .navigationBarHidden(true)
         }
     }
     func triggerAlert(){
@@ -84,7 +83,7 @@ struct StationMapView_Previews: PreviewProvider {
 
 final class ContentViewModel : NSObject, ObservableObject, CLLocationManagerDelegate{
     
-    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.08679, longitude: 72.87370), span: MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1))
+    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.18801, longitude: 72.86574), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     
     var locationManager : CLLocationManager?
     

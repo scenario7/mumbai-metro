@@ -10,10 +10,13 @@ import MapKit
 import WebKit
 
 struct FareView: View {
-    
     init(){
         UIPickerView.appearance().tintColor = .white
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().font, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named:"LightBlue")
+        UISegmentedControl.appearance().backgroundColor = UIColor(named: "DarkBlue")
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!, .foregroundColor: UIColor(Color(hue: 0, saturation: 0, brightness: 1))], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!], for: .selected)
     }
     
     @State var line = 0
@@ -33,58 +36,67 @@ struct FareView: View {
                 LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
                     .ignoresSafeArea()
                 VStack(alignment:.center, spacing:30){
-                    HStack {
+                    VStack {
                         Text("Select Line")
                             .font(Font.custom(Constants().font, size: 20))
                             .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
-                        Spacer()
                         Picker("Line", selection: $line) {
                             Text("Line 1").tag(0)
                             Text("Line 2A").tag(1)
                             Text("Line 7").tag(2)
                         }
-                        .pickerStyle(.menu)
+                        .pickerStyle(.segmented)
                         .padding()
                     }
-                    VStack {
-                        HStack{
-                            Text("Departing from")
-                                .font(Font.custom(Constants().font, size: 20))
-                                .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
-                            Spacer()
-                            Picker("Departure", selection: $departure) {
-                                if(line == 0){
-                                    ForEach(linesPublished[line].stations){ station in
-                                        Text(station.name).tag(station.id)
-                                    }
-                                } else {
-                                    ForEach(line2A7Stations){ station in
-                                        Text(station.name).tag(station.id)
-                                    }
-                                }
-                            }
-                            .pickerStyle(.menu)
-                            .padding()
-                        }
-                        HStack{
-                            Text("Arriving at")
-                                .font(Font.custom(Constants().font, size: 20))
-                                .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
-                            Spacer()
-                            Picker("Arrival", selection: $arrival) {
-                                if(line == 0){
-                                    ForEach(linesPublished[line].stations){ station in
-                                        Text(station.name).tag(station.id)
-                                    }
-                                } else {
-                                    ForEach(line2A7Stations){ station in
-                                        Text(station.name).tag(station.id)
+                    VStack(spacing:30) {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .foregroundColor(Color("DarkBlue"))
+                            VStack{
+                                Text("Departure from")
+                                    .font(Font.custom(Constants().font, size: 20))
+                                    .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
+                                Spacer()
+                                Picker("Departure", selection: $departure) {
+                                    if(line == 0){
+                                        ForEach(linesPublished[line].stations){ station in
+                                            Text(station.name).tag(station.id)
+                                        }
+                                    } else {
+                                        ForEach(line2A7Stations){ station in
+                                            Text(station.name).tag(station.id)
+                                        }
                                     }
                                 }
+                                .pickerStyle(.menu)
                             }
-                            .pickerStyle(.menu)
                             .padding()
                         }
+                        .frame(width: 260, height: 100, alignment: .center)
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 15)
+                                .foregroundColor(Color("DarkBlue"))
+                            VStack{
+                                Text("Arrival at")
+                                    .font(Font.custom(Constants().font, size: 20))
+                                    .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
+                                Picker("Arrival", selection: $arrival) {
+                                    if(line == 0){
+                                        ForEach(linesPublished[line].stations){ station in
+                                            Text(station.name).tag(station.id)
+                                        }
+                                    } else {
+                                        ForEach(line2A7Stations){ station in
+                                            Text(station.name).tag(station.id)
+                                        }
+                                    }
+                                }
+                                .pickerStyle(.menu)
+                            }
+                            .padding()
+                        }
+                        .frame(width: 260, height: 100, alignment: .center)
+
                         
                     }
                     Button {
