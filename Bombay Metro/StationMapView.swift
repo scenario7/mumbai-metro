@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 
+
 struct StationMapView: View {
     
     @State var locationAlert = false
@@ -62,14 +63,14 @@ struct StationMapView: View {
                 .pickerStyle(.segmented)
                 .padding()
             }
-            .alert("Location access is required", isPresented: $locationAlert){
+            .alert("Please grant location access to the app", isPresented: $locationAlert){
                 Button("OK", role: .cancel){}
             }
             .navigationBarTitle("Station Map")
         }
     }
     func triggerAlert(){
-        locationAlert = true
+        locationAlert.toggle()
     }
 }
 
@@ -83,8 +84,12 @@ struct StationMapView_Previews: PreviewProvider {
 
 final class ContentViewModel : NSObject, ObservableObject, CLLocationManagerDelegate{
     
-    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.18801, longitude: 72.86574), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+    var alert = UIAlertController(title: "test title",
+                message: "test message",
+                preferredStyle: .alert)
     
+    @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 19.18801, longitude: 72.86574), span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
+        
     var locationManager : CLLocationManager?
     
     func checkLocationEnabled(){
@@ -92,7 +97,7 @@ final class ContentViewModel : NSObject, ObservableObject, CLLocationManagerDele
             locationManager = CLLocationManager()
             locationManager!.delegate = self
         } else {
-            print("Show alert")
+            print("error")
         }
     }
     private func checkLocationAuth(){
@@ -104,9 +109,9 @@ final class ContentViewModel : NSObject, ObservableObject, CLLocationManagerDele
         case .notDetermined:
             locationManager.requestWhenInUseAuthorization()
         case .restricted:
-            StationMapView().triggerAlert()
+            print("error")
         case .denied:
-            StationMapView().triggerAlert()
+            print("error")
         case .authorizedAlways,.authorizedWhenInUse:
             mapRegion = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
         @unknown default:

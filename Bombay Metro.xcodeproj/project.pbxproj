@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D917A8102820697600D0B3A1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917A80F2820697600D0B3A1 /* OnboardingView.swift */; };
+		D917A8122820788500D0B3A1 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917A8112820788500D0B3A1 /* InformationView.swift */; };
 		D9330AB42804A1C30016B2BE /* FareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9330AB32804A1C30016B2BE /* FareView.swift */; };
 		D9330B0C280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
 		D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
@@ -58,6 +60,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D917A80F2820697600D0B3A1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		D917A8112820788500D0B3A1 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		D9330AB32804A1C30016B2BE /* FareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareView.swift; sourceTree = "<group>"; };
 		D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Rounded_Elegance.ttf; sourceTree = "<group>"; };
 		D937948027FFF87200DA073F /* StationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationView.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				D987448A27FF57CD0025DF4D /* CardRechargeView.swift */,
 				D937948027FFF87200DA073F /* StationView.swift */,
 				D987448427FF2A600025DF4D /* MetroListView.swift */,
+				D917A80F2820697600D0B3A1 /* OnboardingView.swift */,
+				D917A8112820788500D0B3A1 /* InformationView.swift */,
 				D987448827FF376B0025DF4D /* LineView.swift */,
 				D987448627FF2ADC0025DF4D /* Data.swift */,
 				D9E2D55C27FE2DE100D6785C /* Assets.xcassets */,
@@ -317,8 +323,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D987448D27FF59010025DF4D /* StationMapView.swift in Sources */,
+				D917A8122820788500D0B3A1 /* InformationView.swift in Sources */,
 				D9330AB42804A1C30016B2BE /* FareView.swift in Sources */,
 				D937948127FFF87300DA073F /* StationView.swift in Sources */,
+				D917A8102820697600D0B3A1 /* OnboardingView.swift in Sources */,
 				D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */,
 				D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */,
 				D987448527FF2A600025DF4D /* MetroListView.swift in Sources */,
@@ -492,8 +500,7 @@
 				INFOPLIST_FILE = "Bombay-Metro-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mumbai Metro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required to show you the nearest stations on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -530,8 +537,7 @@
 				INFOPLIST_FILE = "Bombay-Metro-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Mumbai Metro";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Access is Needed to enable certain features within the app.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location access is required to show you the nearest stations on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

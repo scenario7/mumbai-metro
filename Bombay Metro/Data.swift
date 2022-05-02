@@ -41,10 +41,10 @@ struct Contact : Identifiable {
 var line2AStations = [
     Station(id: 1, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590)),
     Station(id: 2, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014)),
-    Station(id: 3, name: "I.C. Colony", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
+    Station(id: 3, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
     Station(id: 4, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337)),
-    Station(id: 5, name: "Don Bosco", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
-    Station(id: 6, name: "Shimpoli", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
+    Station(id: 5, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
+    Station(id: 6, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
     Station(id: 7, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752)),
     Station(id: 8, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474))
 ]
@@ -64,10 +64,10 @@ var line7Stations = [
 var line2A7Stations = [
     Station(id: 18, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474)),
     Station(id: 17, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752)),
-    Station(id: 16, name: "Shimpoli", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
-    Station(id: 15, name: "Don Bosco", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
+    Station(id: 16, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
+    Station(id: 15, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
     Station(id: 14, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337)),
-    Station(id: 13, name: "I.C. Colony", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
+    Station(id: 13, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
     Station(id: 12, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014)),
     Station(id: 11, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590)),
     Station(id: 10, name: "Dahisar East", coordinates: CLLocationCoordinate2D(latitude: 19.25112, longitude: 72.86711)),
@@ -113,10 +113,10 @@ var allStations = [
     Station(id: 19, name: "Versova", coordinates: CLLocationCoordinate2D(latitude: 19.13051, longitude: 72.82144)),
     Station(id: 18, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474)),
     Station(id: 17, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752)),
-    Station(id: 16, name: "Shimpoli", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
-    Station(id: 15, name: "Don Bosco", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
+    Station(id: 16, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
+    Station(id: 15, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
     Station(id: 14, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337)),
-    Station(id: 13, name: "I.C. Colony", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
+    Station(id: 13, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
     Station(id: 12, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014)),
     Station(id: 11, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590)),
     Station(id: 10, name: "Dahisar East", coordinates: CLLocationCoordinate2D(latitude: 19.25112, longitude: 72.86711)),
@@ -135,9 +135,9 @@ let calendar = Calendar.current
 
 var line1 = Line(name: "1", stations: line1Stations, color: .blue, operatedBy: "Reliance", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 30, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 23, minute: 25, second: 0, of: Date())!)
 
-var line2A = Line(name: "2A", stations: line2AStations, color: .yellow, operatedBy: "MMRDA", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 13, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 20, minute: 49, second: 0, of: Date())!)
+var line2A = Line(name: "2A", stations: line2AStations, color: .yellow, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 13, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 20, minute: 49, second: 0, of: Date())!)
 
-var line7 = Line(name: "7", stations: line7Stations, color: .red, operatedBy: "MMRDA", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 50, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 21, minute: 45, second: 0, of: Date())!)
+var line7 = Line(name: "7", stations: line7Stations, color: .red, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 50, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 21, minute: 45, second: 0, of: Date())!)
 
 var allLines = Line(name: "All", stations: allStations, color: .black, operatedBy: "Mumbai Metro", operationBeginsAt: Date(), operationEndsAt: Date())
 
