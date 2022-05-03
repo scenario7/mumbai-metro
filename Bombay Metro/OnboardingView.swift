@@ -24,6 +24,7 @@ struct OnboardingView : View {
 
             }
             .tabViewStyle(PageTabViewStyle())
+            .navigationBarHidden(true)
         }
     }
 }

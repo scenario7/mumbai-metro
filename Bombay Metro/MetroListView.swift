@@ -10,6 +10,7 @@ import SwiftUI
 struct MetroListView: View {
     
     @State var showingContactsBar = false
+    @AppStorage("showOnboarding") var showOnboarding : Bool = true
     
     @Environment(\.openURL) private  var openURL
     var emergencyContacts = [
@@ -144,6 +145,17 @@ struct MetroListView: View {
                 
             }
             .navigationBarTitle("Operational Lines")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        showOnboarding.toggle()
+                    } label: {
+                        Image(systemName: "questionmark.circle")
+                            .foregroundColor(.white)
+                    }
+
+                }
+            }
 
         }
     }

@@ -10,6 +10,7 @@ import MapKit
 import WebKit
 
 struct FareView: View {
+    
     init(){
         UIPickerView.appearance().tintColor = .white
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().font, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
@@ -22,6 +23,7 @@ struct FareView: View {
     @State var line = 0
     @State var departure = 1
     @State var arrival = 1
+    @State var returnTrip : Bool = false
     
     
     @State private var showingAlert = false
@@ -48,6 +50,11 @@ struct FareView: View {
                         .pickerStyle(.segmented)
                         .padding()
                     }
+                    Toggle(isOn: $returnTrip, label: {Text("Return Journey?")
+                            .foregroundColor(.white)
+                            .font(Font.custom(Constants().font, size: 17))
+                    })
+                        .padding([.leading,.trailing], 70)
                     VStack(spacing:30) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
@@ -108,15 +115,21 @@ struct FareView: View {
                         } else if ((line==1 || line==2)&&(departure != arrival)){
                             print(departure,arrival)
                             fare = line2A7Fare[departure-1][arrival-1]
-//                            departure = 1
-//                            arrival = 1
+                            if returnTrip{
+                                fare *= 2
+                            } else {
+                                fare *= 1
+                            }
                             showingFare = true
                             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         } else {
                             print(departure-1,arrival-1)
                             fare = line1Fare[departure-1][arrival-1]
-//                            departure = 1
-//                            arrival = 1
+                            if returnTrip{
+                                fare *= 2
+                            } else {
+                                fare *= 1
+                            }
                             showingFare = true
                             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
                         }
@@ -137,7 +150,7 @@ struct FareView: View {
                     .alert("Departure and Arrival Stations cannot be the same", isPresented: $showingAlert) {
                         Button("Close", role: .cancel) { }
                     }
-                    .alert("Single Journey Fare : ₹\(fare) \nPlatform No. : \(departure>arrival ? "1" : "2")", isPresented: $showingFare){
+                    .alert("\(returnTrip ? "Return" : "One-way") Journey Fare : ₹\(fare) \nPlatform No. : \(departure>arrival ? "1" : "2")", isPresented: $showingFare){
                         Button("OK", role: .cancel){
                             departure = 1
                             arrival = 1
