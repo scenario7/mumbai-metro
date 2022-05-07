@@ -28,6 +28,7 @@ struct Station : Identifiable {
     var id : Int
     var name : String
     var coordinates : CLLocationCoordinate2D
+    var secToNext : Int?
 }
 
 struct Contact : Identifiable {
@@ -39,49 +40,29 @@ struct Contact : Identifiable {
 }
 
 var line2AStations = [
-    Station(id: 1, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590)),
-    Station(id: 2, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014)),
-    Station(id: 3, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
-    Station(id: 4, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337)),
-    Station(id: 5, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
-    Station(id: 6, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
-    Station(id: 7, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752)),
-    Station(id: 8, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474))
+    Station(id: 11, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590), secToNext: 147),
+    Station(id: 12, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014), secToNext: 91),
+    Station(id: 13, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573), secToNext: 110),
+    Station(id: 14, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337), secToNext: 86),
+    Station(id: 15, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085), secToNext: 85),
+    Station(id: 16, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084), secToNext: 87),
+    Station(id: 17, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752), secToNext: 75),
+    Station(id: 18, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474))
 ]
 var line7Stations = [
-    Station(id: 1, name: "Dahisar East", coordinates: CLLocationCoordinate2D(latitude: 19.25112, longitude: 72.86711)),
-    Station(id: 2, name: "Ovaripada", coordinates: CLLocationCoordinate2D(latitude: 19.24335, longitude: 72.86412)),
-    Station(id: 3, name: "Rashtriya Udyan", coordinates: CLLocationCoordinate2D(latitude: 19.23468, longitude: 72.86314)),
-    Station(id: 4, name: "Devipada", coordinates: CLLocationCoordinate2D(latitude: 19.22418, longitude: 72.86424)),
-    Station(id: 5, name: "Magathane", coordinates: CLLocationCoordinate2D(latitude: 19.21711, longitude: 72.86674)),
-    Station(id: 6, name: "Poisar", coordinates: CLLocationCoordinate2D(latitude: 19.20387, longitude: 72.86332)),
-    Station(id: 7, name: "Akurli", coordinates: CLLocationCoordinate2D(latitude: 19.19849, longitude: 72.86058)),
-    Station(id: 8, name: "Kurar", coordinates: CLLocationCoordinate2D(latitude: 19.18650, longitude: 72.85844)),
-    Station(id: 9, name: "Dindoshi", coordinates: CLLocationCoordinate2D(latitude: 19.17965, longitude: 72.85816)),
-    Station(id: 10, name: "Aarey", coordinates: CLLocationCoordinate2D(latitude: 19.16922, longitude: 72.85871))
+    Station(id: 1, name: "Aarey", coordinates: CLLocationCoordinate2D(latitude: 19.16922, longitude: 72.85871), secToNext: 122),
+    Station(id: 2, name: "Dindoshi", coordinates: CLLocationCoordinate2D(latitude: 19.17965, longitude: 72.85816), secToNext: 86),
+    Station(id: 3, name: "Kurar", coordinates: CLLocationCoordinate2D(latitude: 19.18650, longitude: 72.85844), secToNext: 120),
+    Station(id: 4, name: "Akurli", coordinates: CLLocationCoordinate2D(latitude: 19.19849, longitude: 72.86058), secToNext: 65),
+    Station(id: 5, name: "Poisar", coordinates: CLLocationCoordinate2D(latitude: 19.20387, longitude: 72.86332), secToNext: 123),
+    Station(id: 6, name: "Magathane", coordinates: CLLocationCoordinate2D(latitude: 19.21711, longitude: 72.86674), secToNext: 70),
+    Station(id: 7, name: "Devipada", coordinates: CLLocationCoordinate2D(latitude: 19.22418, longitude: 72.86424), secToNext: 110),
+    Station(id: 8, name: "Rashtriya Udyan", coordinates: CLLocationCoordinate2D(latitude: 19.23468, longitude: 72.86314), secToNext: 110),
+    Station(id: 9, name: "Ovaripada", coordinates: CLLocationCoordinate2D(latitude: 19.24335, longitude: 72.86412), secToNext: 85),
+    Station(id: 10, name: "Dahisar East", coordinates: CLLocationCoordinate2D(latitude: 19.25112, longitude: 72.86711), secToNext: 97)
 ]
 
-var line2A7Stations = [
-    Station(id: 18, name: "Dahanukarvadi", coordinates: CLLocationCoordinate2D(latitude: 19.20600, longitude: 72.83474)),
-    Station(id: 17, name: "Kandivali West", coordinates: CLLocationCoordinate2D(latitude: 19.21434, longitude: 72.83752)),
-    Station(id: 16, name: "Pahadi Eksar", coordinates: CLLocationCoordinate2D(latitude: 19.22327, longitude: 72.84084)),
-    Station(id: 15, name: "Borivali West", coordinates: CLLocationCoordinate2D(latitude: 19.23140, longitude: 72.84085)),
-    Station(id: 14, name: "Eksar Road", coordinates: CLLocationCoordinate2D(latitude: 19.24041, longitude: 72.84337)),
-    Station(id: 13, name: "Mandapeshwar", coordinates: CLLocationCoordinate2D(latitude: 19.24983, longitude: 72.84573)),
-    Station(id: 12, name: "Kanderpada", coordinates: CLLocationCoordinate2D(latitude: 19.25658, longitude: 72.85014)),
-    Station(id: 11, name: "Anand Nagar", coordinates: CLLocationCoordinate2D(latitude: 19.25727, longitude: 72.86590)),
-    Station(id: 10, name: "Dahisar East", coordinates: CLLocationCoordinate2D(latitude: 19.25112, longitude: 72.86711)),
-    Station(id: 9, name: "Ovaripada", coordinates: CLLocationCoordinate2D(latitude: 19.24335, longitude: 72.86412)),
-    Station(id: 8, name: "Rashtriya Udyan", coordinates: CLLocationCoordinate2D(latitude: 19.23468, longitude: 72.86314)),
-    Station(id: 7, name: "Devipada", coordinates: CLLocationCoordinate2D(latitude: 19.22418, longitude: 72.86424)),
-    Station(id: 6, name: "Magathane", coordinates: CLLocationCoordinate2D(latitude: 19.21711, longitude: 72.86674)),
-    Station(id: 5, name: "Poisar", coordinates: CLLocationCoordinate2D(latitude: 19.20387, longitude: 72.86332)),
-    Station(id: 4, name: "Akurli", coordinates: CLLocationCoordinate2D(latitude: 19.19849, longitude: 72.86058)),
-    Station(id: 3, name: "Kurar", coordinates: CLLocationCoordinate2D(latitude: 19.18650, longitude: 72.85844)),
-    Station(id: 2, name: "Dindoshi", coordinates: CLLocationCoordinate2D(latitude: 19.17965, longitude: 72.85816)),
-    Station(id: 1, name: "Aarey", coordinates: CLLocationCoordinate2D(latitude: 19.16922, longitude: 72.85871))
-
-]
+var line2A7Stations = line7Stations + line2AStations
 
 var line1Stations = [
     Station(id: 1, name: "Ghatkopar", coordinates: CLLocationCoordinate2D(latitude: 19.08680, longitude: 72.90806)),

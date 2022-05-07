@@ -18,7 +18,7 @@ struct OnboardingView : View {
                 .ignoresSafeArea()
             TabView {
                 OnboardingPage(icon: "tram", image: "homeScreen", title: "Home Page", description: "This is the home page. You can find all the information relating to every operational line on the Mumbai Metro Network here.",showDismissButton: false, showOnboarding : $showOnboarding)
-                OnboardingPage(icon: "phone.fill", image: "emergencyNumbers", title: "Emergency Contacts", description: "Access all the emergency contacts tapping the phone icon and scrolling.",showDismissButton: false, showOnboarding : $showOnboarding)
+                OnboardingPage(icon: "phone.fill", image: "emergencyNumbers", title: "Emergency Contacts", description: "Access all the emergency contacts by tapping the phone icon and scrolling.",showDismissButton: false, showOnboarding : $showOnboarding)
                 OnboardingPage(icon: "map", image: "mapView", title: "Station Map", description: "View all the stations on a map for the selected line by visiting the Map tab.",showDismissButton: false, showOnboarding : $showOnboarding)
                 OnboardingPage(icon: "indianrupeesign.square", image: "fareCalculator", title: "Fare Calculator", description: "Calculate travel fares by entering the departure and destination on the Fare tab and then clicking calculate.", showDismissButton: true, showOnboarding : $showOnboarding)
 
