@@ -22,6 +22,7 @@ struct Line : Identifiable{
     var operatedBy : String
     var operationBeginsAt : Date
     var operationEndsAt : Date
+    var intervalAvailible : Bool
 }
 
 struct Station : Identifiable {
@@ -114,13 +115,13 @@ var allStations = [
 
 let calendar = Calendar.current
 
-var line1 = Line(name: "1", stations: line1Stations, color: .blue, operatedBy: "Reliance", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 30, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 23, minute: 25, second: 0, of: Date())!)
+var line1 = Line(name: "1", stations: line1Stations, color: .blue, operatedBy: "Reliance", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 30, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 23, minute: 25, second: 0, of: Date())!, intervalAvailible: true)
 
-var line2A = Line(name: "2A", stations: line2AStations, color: .yellow, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 13, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 20, minute: 49, second: 0, of: Date())!)
+var line2A = Line(name: "2A", stations: line2AStations, color: .yellow, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 13, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 20, minute: 49, second: 0, of: Date())!, intervalAvailible: false)
 
-var line7 = Line(name: "7", stations: line7Stations, color: .red, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 50, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 21, minute: 45, second: 0, of: Date())!)
+var line7 = Line(name: "7", stations: line7Stations, color: .red, operatedBy: "MMMOCL", operationBeginsAt: calendar.date(bySettingHour: 6, minute: 50, second: 0, of: Date())!, operationEndsAt: calendar.date(bySettingHour: 21, minute: 45, second: 0, of: Date())!, intervalAvailible: false)
 
-var allLines = Line(name: "All", stations: allStations, color: .black, operatedBy: "Mumbai Metro", operationBeginsAt: Date(), operationEndsAt: Date())
+var allLines = Line(name: "All", stations: allStations, color: .black, operatedBy: "Mumbai Metro", operationBeginsAt: Date(), operationEndsAt: Date(), intervalAvailible: false)
 
 func colorFinder(id : Int) -> Color{
     if (id>=1 || id<=10){

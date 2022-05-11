@@ -16,5 +16,10 @@
 	<array>
 		<string>Rounded_Elegance.ttf</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

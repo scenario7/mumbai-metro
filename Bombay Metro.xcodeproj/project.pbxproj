@@ -14,11 +14,16 @@
 		D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
 		D9330B0E280577190016B2BE /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */; };
 		D937948127FFF87300DA073F /* StationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D937948027FFF87200DA073F /* StationView.swift */; };
+		D976F176282BF15000B89EAD /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D976F175282BF15000B89EAD /* FirebaseAnalytics */; };
+		D976F178282BF15000B89EAD /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D976F177282BF15000B89EAD /* FirebaseMessaging */; };
 		D987448527FF2A600025DF4D /* MetroListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448427FF2A600025DF4D /* MetroListView.swift */; };
 		D987448727FF2ADC0025DF4D /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448627FF2ADC0025DF4D /* Data.swift */; };
 		D987448927FF376C0025DF4D /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448827FF376B0025DF4D /* LineView.swift */; };
 		D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448A27FF57CD0025DF4D /* CardRechargeView.swift */; };
 		D987448D27FF59010025DF4D /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448C27FF59010025DF4D /* StationMapView.swift */; };
+		D9AD3EDF282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
+		D9AD3EE0282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
+		D9AD3EE1282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
 		D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */; };
 		D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55827FE2DDF00D6785C /* Bombay_MetroApp.swift */; };
 		D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D55A27FE2DDF00D6785C /* ContentView.swift */; };
@@ -71,6 +76,7 @@
 		D987448A27FF57CD0025DF4D /* CardRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRechargeView.swift; sourceTree = "<group>"; };
 		D987448C27FF59010025DF4D /* StationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapView.swift; sourceTree = "<group>"; };
 		D987448E27FF59BF0025DF4D /* Bombay-Metro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bombay-Metro-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9DE255C2809D150008ED61B /* Bombay Metro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bombay Metro.entitlements"; sourceTree = "<group>"; };
 		D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bombay Metro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D976F178282BF15000B89EAD /* FirebaseMessaging in Frameworks */,
+				D976F176282BF15000B89EAD /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +164,7 @@
 				D917A8112820788500D0B3A1 /* InformationView.swift */,
 				D987448827FF376B0025DF4D /* LineView.swift */,
 				D987448627FF2ADC0025DF4D /* Data.swift */,
+				D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */,
 				D9E2D55C27FE2DE100D6785C /* Assets.xcassets */,
 				D9E2D55E27FE2DE100D6785C /* Preview Content */,
 			);
@@ -204,6 +213,10 @@
 			dependencies = (
 			);
 			name = "Bombay Metro";
+			packageProductDependencies = (
+				D976F175282BF15000B89EAD /* FirebaseAnalytics */,
+				D976F177282BF15000B89EAD /* FirebaseMessaging */,
+			);
 			productName = "Bombay Metro";
 			productReference = D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +289,9 @@
 				Base,
 			);
 			mainGroup = D9E2D54C27FE2DDF00D6785C;
+			packageReferences = (
+				D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = D9E2D55627FE2DDF00D6785C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,6 +310,7 @@
 			files = (
 				D9330B0C280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
 				D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */,
+				D9AD3EDF282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
 				D9E2D56027FE2DE100D6785C /* Preview Assets.xcassets in Resources */,
 				D9E2D55D27FE2DE100D6785C /* Assets.xcassets in Resources */,
 			);
@@ -304,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+				D9AD3EE0282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9330B0E280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+				D9AD3EE1282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +694,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D976F175282BF15000B89EAD /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		D976F177282BF15000B89EAD /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D9E2D54D27FE2DDF00D6785C /* Project object */;
 }

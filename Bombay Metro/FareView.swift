@@ -11,6 +11,8 @@ import WebKit
 
 struct FareView: View {
     
+    let generator = UINotificationFeedbackGenerator()
+    
     init(){
         UIPickerView.appearance().tintColor = .white
         UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().font, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
@@ -111,7 +113,7 @@ struct FareView: View {
                             showingAlert = true
 //                            departure = 1
 //                            arrival = 1
-                            UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
+                            self.generator.notificationOccurred(.success)
                         } else if ((line==1 || line==2)&&(departure != arrival)){
                             print(departure,arrival)
                             fare = line2A7Fare[departure-1][arrival-1]
