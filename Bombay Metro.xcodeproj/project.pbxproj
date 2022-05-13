@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91464AD282E8A8800FE2EC7 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91464AC282E8A8800FE2EC7 /* BannerAd.swift */; };
+		D91464B0282E8B3B00FE2EC7 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = D91464AF282E8B3B00FE2EC7 /* GoogleMobileAds */; };
 		D917A8102820697600D0B3A1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917A80F2820697600D0B3A1 /* OnboardingView.swift */; };
 		D917A8122820788500D0B3A1 /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D917A8112820788500D0B3A1 /* InformationView.swift */; };
 		D9330AB42804A1C30016B2BE /* FareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9330AB32804A1C30016B2BE /* FareView.swift */; };
@@ -65,6 +67,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D91464AC282E8A8800FE2EC7 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		D917A80F2820697600D0B3A1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		D917A8112820788500D0B3A1 /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		D9330AB32804A1C30016B2BE /* FareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FareView.swift; sourceTree = "<group>"; };
@@ -96,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D91464B0282E8B3B00FE2EC7 /* GoogleMobileAds in Frameworks */,
 				D976F178282BF15000B89EAD /* FirebaseMessaging in Frameworks */,
 				D976F176282BF15000B89EAD /* FirebaseAnalytics in Frameworks */,
 			);
@@ -157,6 +161,7 @@
 				D9E2D55A27FE2DDF00D6785C /* ContentView.swift */,
 				D9330AB32804A1C30016B2BE /* FareView.swift */,
 				D987448C27FF59010025DF4D /* StationMapView.swift */,
+				D91464AC282E8A8800FE2EC7 /* BannerAd.swift */,
 				D987448A27FF57CD0025DF4D /* CardRechargeView.swift */,
 				D937948027FFF87200DA073F /* StationView.swift */,
 				D987448427FF2A600025DF4D /* MetroListView.swift */,
@@ -216,6 +221,7 @@
 			packageProductDependencies = (
 				D976F175282BF15000B89EAD /* FirebaseAnalytics */,
 				D976F177282BF15000B89EAD /* FirebaseMessaging */,
+				D91464AF282E8B3B00FE2EC7 /* GoogleMobileAds */,
 			);
 			productName = "Bombay Metro";
 			productReference = D9E2D55527FE2DDF00D6785C /* Bombay Metro.app */;
@@ -291,6 +297,7 @@
 			mainGroup = D9E2D54C27FE2DDF00D6785C;
 			packageReferences = (
 				D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				D91464AE282E8B3A00FE2EC7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = D9E2D55627FE2DDF00D6785C /* Products */;
 			projectDirPath = "";
@@ -345,6 +352,7 @@
 				D917A8122820788500D0B3A1 /* InformationView.swift in Sources */,
 				D9330AB42804A1C30016B2BE /* FareView.swift in Sources */,
 				D937948127FFF87300DA073F /* StationView.swift in Sources */,
+				D91464AD282E8A8800FE2EC7 /* BannerAd.swift in Sources */,
 				D917A8102820697600D0B3A1 /* OnboardingView.swift in Sources */,
 				D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */,
 				D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */,
@@ -696,6 +704,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		D91464AE282E8B3A00FE2EC7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -707,6 +723,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		D91464AF282E8B3B00FE2EC7 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D91464AE282E8B3A00FE2EC7 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		D976F175282BF15000B89EAD /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D976F174282BF15000B89EAD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

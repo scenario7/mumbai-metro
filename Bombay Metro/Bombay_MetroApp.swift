@@ -8,10 +8,14 @@
 import SwiftUI
 import Firebase
 import UserNotifications
+import GoogleMobileAds
 
 @main
 struct Bombay_MetroApp: App {
-
+    init(){
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+    }
+    
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
