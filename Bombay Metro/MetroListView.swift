@@ -11,6 +11,7 @@ struct MetroListView: View {
     
     @State var showingContactsBar = false
     @AppStorage("showOnboarding") var showOnboarding : Bool = true
+    @State var animationValue = 0
     
     @Environment(\.openURL) private  var openURL
     var emergencyContacts = [
@@ -32,9 +33,22 @@ struct MetroListView: View {
             let columns = [
                     GridItem(.adaptive(minimum: 200)),
                 ]
-            ZStack(alignment:.topLeading) {
+            ZStack(alignment:.bottom) {
                 LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
                     .ignoresSafeArea()
+                HStack(spacing:0) {
+                    Image("metroAnimation")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 50,alignment: .center)
+                    Image("metroAnimation")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 50,alignment: .center)
+                        .rotation3DEffect(.degrees(180), axis: (x: 0, y: 1, z: 0))
+                }
+                .animation(.easeInOut(duration: 5))
+                .offset(x: animationValue % 2==0 ? -500 : 500)
                 VStack(alignment:.leading) {
                     LazyVGrid(columns: columns,alignment: .leading, spacing: 60) {
                             ForEach(linesPublished){ line in
@@ -154,6 +168,11 @@ struct MetroListView: View {
                             .foregroundColor(.white)
                     }
 
+                }
+            }
+            .onAppear{
+                DispatchQueue.main.asyncAfter(deadline: .now()) {
+                    animationValue+=1
                 }
             }
 

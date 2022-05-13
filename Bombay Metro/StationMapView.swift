@@ -55,6 +55,9 @@ struct StationMapView: View {
 
                     
                 }
+                .onAppear {
+                    viewModel.checkLocationEnabled()
+                }
                 Picker("Line", selection: $lineDisplayed) {
                                 Text("Line 1").tag(0)
                                 Text("Line 2A").tag(1)
@@ -113,7 +116,7 @@ final class ContentViewModel : NSObject, ObservableObject, CLLocationManagerDele
         case .denied:
             print("error")
         case .authorizedAlways,.authorizedWhenInUse:
-            mapRegion = MKCoordinateRegion(center: locationManager.location!.coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+            print("success")
         @unknown default:
             break
         }

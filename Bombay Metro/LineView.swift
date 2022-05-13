@@ -61,7 +61,7 @@ struct LineView: View {
                             }
                             .padding()
                             
-                            
+                            BannerAd(unitID: "ca-app-pub-6446002050162602/8554424042")
                             
                             HStack(spacing:40) {
                                 if (line.intervalAvailible ==  true){

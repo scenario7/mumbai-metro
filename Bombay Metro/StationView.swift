@@ -36,7 +36,8 @@ struct StationView: View {
 //                                    Text("\(name) Station")
 //                                        .font(Font.custom(Constants().font, size: 25))
 //                                        .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
-                                    Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), latitudinalMeters: 0.1, longitudinalMeters: 0.1)))
+                                    BannerAd(unitID: "ca-app-pub-6446002050162602/8554424042")
+                                    Map(coordinateRegion: .constant(MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude), latitudinalMeters: 0.5, longitudinalMeters: 0.5)))
                                         .frame(height:200)
                                         .ignoresSafeArea()
                                     ZStack {
