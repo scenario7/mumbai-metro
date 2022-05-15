@@ -68,7 +68,8 @@ struct MetroListView: View {
                                                 .frame(width: 35, height: 50, alignment: .leading)
                                                 .foregroundColor(line.color)
                                             Text(line.name)
-                                                .font(.system(size: 15, weight: .black, design: .default))
+                                                .font(.system(size: 15, weight: .bold, design: .default))
+                                                .shadow(color: .black, radius: 10, x: 0, y: 0)
                                                 .foregroundColor(.white)
                                         }
                                         Text("Line \(line.name)")

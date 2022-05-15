@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>GADIsAdManagerApp</key>
-	<true/>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -14,17 +12,10 @@
 		</dict>
 		<dict/>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Rounded_Elegance.ttf</string>
-	</array>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>remote-notification</string>
-	</array>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-6446002050162602~5988255861</string>
+	<key>GADIsAdManagerApp</key>
+	<true/>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict>
@@ -175,6 +166,15 @@
 			<key>SKAdNetworkIdentifier</key>
 			<string>3qcr597p9d.skadnetwork</string>
 		</dict>
+	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Rounded_Elegance.ttf</string>
+	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
 	</array>
 </dict>
 </plist>
