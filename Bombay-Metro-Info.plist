@@ -169,6 +169,9 @@
 	</array>
 	<key>UIAppFonts</key>
 	<array>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Regular.ttf</string>
 		<string>Rounded_Elegance.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>

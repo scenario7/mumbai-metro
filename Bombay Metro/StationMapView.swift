@@ -14,10 +14,10 @@ struct StationMapView: View {
     @State var locationAlert = false
     
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named:"LightBlue")
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named:"MainColor")
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "DarkBlue")
-        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!, .foregroundColor: UIColor(Color(hue: 0, saturation: 0, brightness: 1))], for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().poppinsRegular, size: 20)!, .foregroundColor: UIColor(Color(hue: 0, saturation: 0, brightness: 1))], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().poppinsSemiBold, size: 20)!], for: .selected)
     }
     
     @StateObject private var viewModel = ContentViewModel()
@@ -26,15 +26,15 @@ struct StationMapView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment:.top) {
-                LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
+                Color("MainColor")
                     .ignoresSafeArea()
                 Map(coordinateRegion: $viewModel.mapRegion, showsUserLocation: true, annotationItems: linesPublished[lineDisplayed].stations){ station in
                     MapAnnotation(coordinate: station.coordinates) {
-                        NavigationLink(destination: StationView(name: station.name, line: linesPublished[lineDisplayed], lineOperator: linesPublished[lineDisplayed].operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude)) {
+                        NavigationLink(destination: StationView(name: station.name, line: linesPublished[lineDisplayed], lineOperator: linesPublished[lineDisplayed].operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude, stationID: station.id, busList: station.busList)) {
                             VStack {
                                 ZStack{
                                     Circle()
-                                        .frame(width: 16, height: 16, alignment: .center)
+                                        .frame(width: 17, height: 17, alignment: .center)
                                         .foregroundColor(linesPublished[lineDisplayed].color)
                                     Image(systemName: "tram")
                                         .resizable()
@@ -44,9 +44,9 @@ struct StationMapView: View {
                                 }
                                 
                                 Text(station.name)
-                                    .font(Font.custom(Constants().font, size: 8))
+                                    .font(Font.custom(Constants().poppinsSemiBold, size: 7))
                                     .foregroundColor(.white)
-                                    .background(Color.black.opacity(0.7))
+                                    .background(Color.black.opacity(0.5))
                                 
                             }
                         }

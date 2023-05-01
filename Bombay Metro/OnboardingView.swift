@@ -14,13 +14,13 @@ struct OnboardingView : View {
     
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
+            Color("MainColor")
                 .ignoresSafeArea()
             TabView {
-                OnboardingPage(icon: "tram", image: "homeScreen", title: "Home Page", description: "This is the home page. You can find all the information relating to every operational line on the Mumbai Metro Network here.",showDismissButton: false, showOnboarding : $showOnboarding)
-                OnboardingPage(icon: "phone.fill", image: "emergencyNumbers", title: "Emergency Contacts", description: "Access all the emergency contacts by tapping the phone icon and scrolling.",showDismissButton: false, showOnboarding : $showOnboarding)
-                OnboardingPage(icon: "map", image: "mapView", title: "Station Map", description: "View all the stations on a map for the selected line by visiting the Map tab.",showDismissButton: false, showOnboarding : $showOnboarding)
-                OnboardingPage(icon: "indianrupeesign.square", image: "fareCalculator", title: "Fare Calculator", description: "Calculate travel fares by entering the departure and destination on the Fare tab and then clicking calculate.", showDismissButton: true, showOnboarding : $showOnboarding)
+                OnboardingPage(icon: "house", image: "homeScreen", title: "Home Page", description: "This is the home page where you can find all the important features at one place.",showDismissButton: false, showOnboarding : $showOnboarding)
+                OnboardingPage(icon: "clock", image: "stationInfo", title: "Station Info", description: "View Station related info, including arrival timing estimates and navigate to stations.",showDismissButton: false, showOnboarding : $showOnboarding)
+                OnboardingPage(icon: "indianrupeesign.square", image: "fareCalculator", title: "Fare Calculator", description: "Calculate travel fares by entering the departure and destination on the Fare tab and then clicking calculate.", showDismissButton: false, showOnboarding : $showOnboarding)
+                OnboardingPage(icon: "train.side.front.car", image: "travelInfo", title: "Travel", description: "Book tickets, recharge cards and do more from the new Travel page.",showDismissButton: true, showOnboarding : $showOnboarding)
 
             }
             .tabViewStyle(PageTabViewStyle())
@@ -55,7 +55,7 @@ struct OnboardingPage : View {
                     .frame(width: 40, height: 40, alignment: .center)
                     .foregroundColor(.white)
                 Text(title)
-                    .font(Font.custom(Constants().font, size: 30))
+                    .font(Font.custom(Constants().poppinsSemiBold, size: 30))
                     .foregroundColor(.white)
                 Image(image)
                     .resizable()
@@ -64,6 +64,7 @@ struct OnboardingPage : View {
                 Text(description)
                     .multilineTextAlignment(.center)
                     .foregroundColor(.white)
+                    .font(Font.custom(Constants().poppinsRegular, size: 20))
                 if showDismissButton{
                     Button {
                         UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
@@ -72,13 +73,13 @@ struct OnboardingPage : View {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
                                 .frame(width: 150, height: 45, alignment: .center)
-                                .foregroundColor(Constants().lightBlue)
+                                .foregroundColor(.white)
                             HStack {
                                 Text("Get Started")
-                                    .font(.system(size: 20, weight: .medium, design: .default))
-                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))
+                                    .font(Font.custom(Constants().poppinsSemiBold, size: 20))
+                                    .foregroundColor(.black)
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))
+                                    .foregroundColor(.black)
                             }
                         }
 

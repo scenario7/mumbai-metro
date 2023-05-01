@@ -8,6 +8,7 @@
 import SwiftUI
 import MapKit
 import WebKit
+import Firebase
 
 struct FareView: View {
     
@@ -15,11 +16,11 @@ struct FareView: View {
     
     init(){
         UIPickerView.appearance().tintColor = .white
-        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().font, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named:"LightBlue")
+        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: Constants().poppinsSemiBold, size: 30)!, .foregroundColor : UIColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))]
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(named:"MainColor")
         UISegmentedControl.appearance().backgroundColor = UIColor(named: "DarkBlue")
-        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!, .foregroundColor: UIColor(Color(hue: 0, saturation: 0, brightness: 1))], for: .normal)
-        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().font, size: 20)!], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().poppinsRegular, size: 20)!, .foregroundColor: UIColor(Color(hue: 0, saturation: 0, brightness: 1))], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.font : UIFont(name: Constants().poppinsSemiBold, size: 20)!], for: .selected)
     }
     
     @State var line = 0
@@ -37,12 +38,12 @@ struct FareView: View {
     var body: some View {
         NavigationView{
             ZStack {
-                LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
+                Color("MainColor")
                     .ignoresSafeArea()
-                VStack(alignment:.center, spacing:30){
+                VStack(alignment:.center, spacing:20){
                     VStack {
                         Text("Select Line")
-                            .font(Font.custom(Constants().font, size: 20))
+                            .font(Font.custom(Constants().poppinsRegular, size: 20))
                             .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
                         Picker("Line", selection: $line) {
                             Text("Line 1").tag(0)
@@ -52,19 +53,25 @@ struct FareView: View {
                         .pickerStyle(.segmented)
                         .padding()
                     }
+                    .onAppear(){
+                        Analytics.logEvent(AnalyticsEventScreenView, parameters: [
+                            AnalyticsParameterScreenName: "\(FareView.self)",
+                            AnalyticsParameterScreenClass: "\(FareView.self)",
+                        ])
+                    }
+
                     Toggle(isOn: $returnTrip, label: {Text("Return Journey?")
                             .foregroundColor(.white)
-                            .font(Font.custom(Constants().font, size: 17))
+                            .font(Font.custom(Constants().poppinsRegular, size: 17))
                     })
                         .padding([.leading,.trailing], 70)
                     VStack(spacing:30) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
-                                .foregroundColor(Color("DarkBlue"))
+                                .foregroundColor(Color("bgAdaptive"))
                             VStack{
                                 Text("Departure from")
-                                    .font(Font.custom(Constants().font, size: 20))
-                                    .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
+                                    .font(Font.custom(Constants().poppinsMedium, size: 20))
                                 Spacer()
                                 Picker("Departure", selection: $departure) {
                                     if(line == 0){
@@ -84,11 +91,10 @@ struct FareView: View {
                         .frame(width: 260, height: 100, alignment: .center)
                         ZStack {
                             RoundedRectangle(cornerRadius: 15)
-                                .foregroundColor(Color("DarkBlue"))
+                                .foregroundColor(Color("bgAdaptive"))
                             VStack{
                                 Text("Arrival at")
-                                    .font(Font.custom(Constants().font, size: 20))
-                                    .foregroundColor(Color(hue: 0, saturation: 0, brightness: 1))
+                                    .font(Font.custom(Constants().poppinsMedium, size: 20))
                                 Picker("Arrival", selection: $arrival) {
                                     if(line == 0){
                                         ForEach(linesPublished[line].stations){ station in
@@ -108,6 +114,7 @@ struct FareView: View {
 
                         
                     }
+                    Spacer()
                     Button {
                         if (departure==arrival){
                             showingAlert = true
@@ -138,14 +145,15 @@ struct FareView: View {
                     } label: {
                         ZStack {
                             RoundedRectangle(cornerRadius: 10)
+                                .stroke()
                                 .frame(width: 150, height: 45, alignment: .center)
-                                .foregroundColor(Constants().lightBlue)
+                                .foregroundColor(.white)
                             HStack {
                                 Text("Calculate")
-                                    .font(.system(size: 20, weight: .medium, design: .default))
-                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))
+                                    .font(Font.custom(Constants().poppinsSemiBold, size: 20))
+                                    .foregroundColor(.white)
                                 Image(systemName: "chevron.right")
-                                    .foregroundColor(Color(hue: 1.0, saturation: 0.0, brightness: 1.0))
+                                    .foregroundColor(.white)
                             }
                         }
                     }
@@ -187,6 +195,7 @@ struct FareView_Previews: PreviewProvider {
     static var previews: some View {
         FareView()
             .colorScheme(.light)
+            .previewDevice("iPhone 8")
     }
 }
 

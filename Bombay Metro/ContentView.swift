@@ -10,30 +10,25 @@ import SwiftUI
 struct ContentView: View {
     
     @AppStorage("showOnboarding") var showOnboarding : Bool = true
+    @State private var selection = 3
     
     init(){
         UITabBar.appearance().isOpaque = false
-        UITabBar.appearance().backgroundColor = UIColor(named: "DarkBlue")
-        UITabBar.appearance().tintColor = UIColor(Constants().lightBlue)
-        UITabBar.appearance().unselectedItemTintColor = .white
+        UITabBar.appearance().backgroundColor = UIColor(.black)
+        UITabBar.appearance().tintColor = UIColor(named: "bgAdaptive")
+        UITabBar.appearance().unselectedItemTintColor = UIColor(.white)
     }
     
     var body: some View {
-        TabView{
-            MetroListView()
-                .tabItem{
-                    VStack{
-                        Image(systemName:"tram")
-                        Text("Lines")
-                    }
-                }
+        TabView(selection:$selection){
             CardRechargeView()
                 .tabItem {
                     VStack{
-                        Image(systemName: "creditcard")
-                        Text("Card Recharge")
+                        Image(systemName: "train.side.front.car")
+                        Text("Travel")
                     }
                 }
+                .tag(1)
             StationMapView()
                 .tabItem {
                     VStack{
@@ -41,6 +36,15 @@ struct ContentView: View {
                         Text("Map")
                     }
                 }
+                .tag(2)
+            HomeView()
+                .tabItem{
+                    VStack{
+                        Image(systemName:"house")
+                        Text("Home")
+                    }
+                }
+                .tag(3)
             FareView()
                 .tabItem {
                     VStack{
@@ -48,6 +52,7 @@ struct ContentView: View {
                         Text("Fare")
                     }
                 }
+                .tag(4)
             InformationView()
                 .tabItem {
                     VStack{
@@ -55,6 +60,7 @@ struct ContentView: View {
                         Text("Info")
                     }
                 }
+                .tag(5)
         }
         .tint(.white)
         .fullScreenCover(isPresented: $showOnboarding) {
@@ -66,5 +72,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

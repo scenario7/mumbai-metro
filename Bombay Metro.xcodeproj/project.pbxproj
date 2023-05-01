@@ -23,6 +23,14 @@
 		D987448927FF376C0025DF4D /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448827FF376B0025DF4D /* LineView.swift */; };
 		D987448B27FF57CD0025DF4D /* CardRechargeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448A27FF57CD0025DF4D /* CardRechargeView.swift */; };
 		D987448D27FF59010025DF4D /* StationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D987448C27FF59010025DF4D /* StationMapView.swift */; };
+		D98A50C72854DF5500AABAED /* TimeCalculateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98A50C62854DF5500AABAED /* TimeCalculateManager.swift */; };
+		D99B775228511348004C5740 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D99B775128511348004C5740 /* HomeView.swift */; };
+		D99B7754285115A7004C5740 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B7753285115A7004C5740 /* Poppins-Regular.ttf */; };
+		D99B7755285115A7004C5740 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B7753285115A7004C5740 /* Poppins-Regular.ttf */; };
+		D99B7756285115A7004C5740 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B7753285115A7004C5740 /* Poppins-Regular.ttf */; };
+		D99B77582851161D004C5740 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B77572851161D004C5740 /* Poppins-SemiBold.ttf */; };
+		D99B77592851161D004C5740 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B77572851161D004C5740 /* Poppins-SemiBold.ttf */; };
+		D99B775A2851161D004C5740 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D99B77572851161D004C5740 /* Poppins-SemiBold.ttf */; };
 		D9AD3EDF282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
 		D9AD3EE0282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
 		D9AD3EE1282BEE1C009BB427 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */; };
@@ -34,6 +42,9 @@
 		D9E2D56A27FE2DE100D6785C /* Bombay_MetroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D56927FE2DE100D6785C /* Bombay_MetroTests.swift */; };
 		D9E2D57427FE2DE100D6785C /* Bombay_MetroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D57327FE2DE100D6785C /* Bombay_MetroUITests.swift */; };
 		D9E2D57627FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E2D57527FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift */; };
+		D9EA3ED328524AF5005C8CAD /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9EA3ED228524AF5005C8CAD /* Poppins-Medium.ttf */; };
+		D9EA3ED428524AF5005C8CAD /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9EA3ED228524AF5005C8CAD /* Poppins-Medium.ttf */; };
+		D9EA3ED528524AF5005C8CAD /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D9EA3ED228524AF5005C8CAD /* Poppins-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +90,10 @@
 		D987448A27FF57CD0025DF4D /* CardRechargeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRechargeView.swift; sourceTree = "<group>"; };
 		D987448C27FF59010025DF4D /* StationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationMapView.swift; sourceTree = "<group>"; };
 		D987448E27FF59BF0025DF4D /* Bombay-Metro-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Bombay-Metro-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D98A50C62854DF5500AABAED /* TimeCalculateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCalculateManager.swift; sourceTree = "<group>"; };
+		D99B775128511348004C5740 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		D99B7753285115A7004C5740 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		D99B77572851161D004C5740 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		D9AD3EDE282BEE1C009BB427 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9DE255C2809D150008ED61B /* Bombay Metro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Bombay Metro.entitlements"; sourceTree = "<group>"; };
 		D9DE255D2809D260008ED61B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,6 +107,7 @@
 		D9E2D56F27FE2DE100D6785C /* Bombay MetroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bombay MetroUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9E2D57327FE2DE100D6785C /* Bombay_MetroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroUITests.swift; sourceTree = "<group>"; };
 		D9E2D57527FE2DE100D6785C /* Bombay_MetroUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bombay_MetroUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9EA3ED228524AF5005C8CAD /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +141,10 @@
 		D9330B0A280576FD0016B2BE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D9EA3ED228524AF5005C8CAD /* Poppins-Medium.ttf */,
+				D99B7753285115A7004C5740 /* Poppins-Regular.ttf */,
 				D9330B0B280577190016B2BE /* Rounded_Elegance.ttf */,
+				D99B77572851161D004C5740 /* Poppins-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -133,6 +152,7 @@
 		D9E2D54C27FE2DDF00D6785C = {
 			isa = PBXGroup;
 			children = (
+				D99B775128511348004C5740 /* HomeView.swift */,
 				D9E2D55727FE2DDF00D6785C /* Bombay Metro */,
 				D9E2D56827FE2DE100D6785C /* Bombay MetroTests */,
 				D9E2D57227FE2DE100D6785C /* Bombay MetroUITests */,
@@ -164,6 +184,7 @@
 				D91464AC282E8A8800FE2EC7 /* BannerAd.swift */,
 				D987448A27FF57CD0025DF4D /* CardRechargeView.swift */,
 				D937948027FFF87200DA073F /* StationView.swift */,
+				D98A50C62854DF5500AABAED /* TimeCalculateManager.swift */,
 				D987448427FF2A600025DF4D /* MetroListView.swift */,
 				D917A80F2820697600D0B3A1 /* OnboardingView.swift */,
 				D917A8112820788500D0B3A1 /* InformationView.swift */,
@@ -316,8 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9330B0C280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
+				D99B77582851161D004C5740 /* Poppins-SemiBold.ttf in Resources */,
 				D9DE255E2809D260008ED61B /* LaunchScreen.storyboard in Resources */,
 				D9AD3EDF282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
+				D99B7754285115A7004C5740 /* Poppins-Regular.ttf in Resources */,
+				D9EA3ED328524AF5005C8CAD /* Poppins-Medium.ttf in Resources */,
 				D9E2D56027FE2DE100D6785C /* Preview Assets.xcassets in Resources */,
 				D9E2D55D27FE2DE100D6785C /* Assets.xcassets in Resources */,
 			);
@@ -327,8 +351,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99B7755285115A7004C5740 /* Poppins-Regular.ttf in Resources */,
+				D99B77592851161D004C5740 /* Poppins-SemiBold.ttf in Resources */,
 				D9330B0D280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
 				D9AD3EE0282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
+				D9EA3ED428524AF5005C8CAD /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,8 +363,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D99B7756285115A7004C5740 /* Poppins-Regular.ttf in Resources */,
+				D99B775A2851161D004C5740 /* Poppins-SemiBold.ttf in Resources */,
 				D9330B0E280577190016B2BE /* Rounded_Elegance.ttf in Resources */,
 				D9AD3EE1282BEE1C009BB427 /* GoogleService-Info.plist in Resources */,
+				D9EA3ED528524AF5005C8CAD /* Poppins-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +380,12 @@
 			files = (
 				D987448D27FF59010025DF4D /* StationMapView.swift in Sources */,
 				D917A8122820788500D0B3A1 /* InformationView.swift in Sources */,
+				D99B775228511348004C5740 /* HomeView.swift in Sources */,
 				D9330AB42804A1C30016B2BE /* FareView.swift in Sources */,
 				D937948127FFF87300DA073F /* StationView.swift in Sources */,
 				D91464AD282E8A8800FE2EC7 /* BannerAd.swift in Sources */,
 				D917A8102820697600D0B3A1 /* OnboardingView.swift in Sources */,
+				D98A50C72854DF5500AABAED /* TimeCalculateManager.swift in Sources */,
 				D9E2D55B27FE2DDF00D6785C /* ContentView.swift in Sources */,
 				D9E2D55927FE2DDF00D6785C /* Bombay_MetroApp.swift in Sources */,
 				D987448527FF2A600025DF4D /* MetroListView.swift in Sources */,
@@ -519,7 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Bombay Metro/Bombay Metro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bombay Metro/Preview Content\"";
 				DEVELOPMENT_TEAM = R5SRU82TD9;
 				ENABLE_PREVIEWS = YES;
@@ -539,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Mumbai-Metro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -556,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Bombay Metro/Bombay Metro.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bombay Metro/Preview Content\"";
 				DEVELOPMENT_TEAM = R5SRU82TD9;
 				ENABLE_PREVIEWS = YES;
@@ -576,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.kevinthomas.Mumbai-Metro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;

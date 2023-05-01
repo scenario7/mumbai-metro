@@ -21,7 +21,7 @@ struct LineView: View {
     
     var body: some View {
         ZStack(alignment:.topLeading) {
-            LinearGradient(colors: [Color(red: 0.004, green: 0.02, blue: 0.206),Color(red: 0.006, green: 0.343, blue: 0.69)], startPoint: .bottom, endPoint: .top)
+            Color("MainColor")
                 .ignoresSafeArea()
             GeometryReader { geometry in
                 ScrollView(.vertical, showsIndicators: false) {
@@ -38,7 +38,7 @@ struct LineView: View {
                                         .frame(width: 50, height: 50, alignment: .center)
                                         .foregroundColor(line.color)
                                     Text(line.name)
-                                        .font(.system(size: 20, weight: .semibold, design: .default))
+                                        .font(Font.custom(Constants().poppinsMedium, size: 20))
                                         .foregroundColor(.white)
                                 }
                                 Spacer()
@@ -60,19 +60,17 @@ struct LineView: View {
                                 .frame(width: 200, height: 30, alignment: .center)
                             }
                             .padding()
-                            
-                            BannerAd(unitID: "ca-app-pub-6446002050162602/8554424042")
-                            
+                                            
                             HStack(spacing:40) {
-                                if (line.intervalAvailible ==  true){
+                                if (line.intervalAvailible ==  false){
                                     VStack(alignment:.trailing, spacing: 71){
                                         ForEach(line.stations) { station in
                                             HStack {
                                                 Text(station.name)
-                                                    .font(.system(size: 15, weight: .semibold, design: .rounded))
+                                                    .font(Font.custom(Constants().poppinsMedium, size: 15))
                                                     .foregroundColor(Color(hue: 0.0, saturation: 0.0, brightness: 1))
                                                 NavigationLink {
-                                                    StationView(name: station.name, line: line, lineOperator: line.operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude)
+                                                    StationView(name: station.name, line: line, lineOperator: line.operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude, stationID: station.id, busList: station.busList)
                                                 } label: {
                                                     Image(systemName: "chevron.right")
                                                         .foregroundColor(.white)
@@ -87,10 +85,10 @@ struct LineView: View {
                                             VStack(alignment:.trailing, spacing:20) {
                                                 HStack {
                                                     Text(station.name)
-                                                        .font(.system(size: 15, weight: .semibold, design: .rounded))
+                                                        .font(Font.custom(Constants().poppinsMedium, size: 15))
                                                         .foregroundColor(Color(hue: 0.0, saturation: 0.0, brightness: 1))
                                                     NavigationLink {
-                                                        StationView(name: station.name, line: line, lineOperator: line.operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude)
+                                                        StationView(name: station.name, line: line, lineOperator: line.operatedBy, latitude: station.coordinates.latitude, longitude: station.coordinates.longitude, stationID: station.id, busList: station.busList)
                                                     } label: {
                                                         Image(systemName: "chevron.right")
                                                             .foregroundColor(.white)
@@ -166,21 +164,21 @@ struct LineView: View {
                             }
                             HStack {
                                 VStack(alignment:.leading) {
-                                    Text("Mumbai Metro")
-                                        .font(.system(size: 12, weight: .regular, design: .default))
+                                    Text("mumbai metro")
+                                        .font(Font.custom(Constants().poppinsRegular, size: 12))
                                         .foregroundColor(Color(hue: 0.0, saturation: 0.0, brightness: 1))
-                                    Text("Version 1.0.1")
+                                    Text("v1.1.2")
                                         .foregroundColor(.gray)
-                                        .font(.system(size: 10, weight: .regular, design: .default))
+                                        .font(Font.custom(Constants().poppinsRegular, size: 10))
                                 }
                                 Spacer()
                                 VStack(alignment:.trailing) {
-                                    Text("Designed and Developed by")
-                                        .font(.system(size: 12, weight: .regular, design: .default))
+                                    Text("designed and developed by")
+                                        .font(Font.custom(Constants().poppinsRegular, size: 12))
                                         .foregroundColor(Color(hue: 0.0, saturation: 0.0, brightness: 1))
-                                    Text("Kevin Thomas")
+                                    Text("kevin thomas")
                                         .foregroundColor(.gray)
-                                        .font(.system(size: 10, weight: .regular, design: .default))
+                                        .font(Font.custom(Constants().poppinsRegular, size: 10))
                                 }
                             }
                             .navigationBarTitle("Line \(line.name)")
